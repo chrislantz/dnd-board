@@ -19,7 +19,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: ng build
+        run: npm run build
 
       - name: Test
         run: ng test
@@ -28,4 +28,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
           branch: gh-pages
-          folder: build
+          folder: dist/apps/dnd-board
+
