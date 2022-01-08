@@ -1,0 +1,23 @@
+name: dnd-board-ci
+on:
+  pull_request:
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '17'
+      
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: ng build
+
+      - name: Test
+        run: ng test
