@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@dnd-board/api-services": ["libs/api-services/src/index.ts"],
+      "@dnd-board/data-model": ["libs/data-model/src/index.ts"]
+    }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp"],
+  "strictPropertyInitialization": false
 }
