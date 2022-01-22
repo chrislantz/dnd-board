@@ -20,6 +20,8 @@
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
     "@nrwl/angular": "13.4.3",
+    "buffer": "^6.0.3",
+    "process": "^0.11.10",
     "redis": "^4.0.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
@@ -53,5 +55,13 @@
     "prettier": "^2.3.1",
     "ts-jest": "27.0.5",
     "typescript": "~4.4.3"
+  },
+  "browser": {
+    "crypto": false,
+    "util": false,
+    "net": false,
+    "stream": false,
+    "tls": false,
+    "assert": false
   }
 }
