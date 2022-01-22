@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { RedisService } from '@dnd-board/api-services';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     CommonModule,
   ],
-  providers: [],
+  providers: [
+    RedisService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

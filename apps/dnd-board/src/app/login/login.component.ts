@@ -1,21 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { RedisService } from '@dnd-board/api-services';
 
 @Component({
   selector: 'dnd-board-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  public password: string = '';
-  public username: string = '';
+  public password = '';
+  public username = '';
 
-  constructor() { }
+  constructor(private readonly redisService: RedisService) { }
 
-  ngOnInit(): void {
-  }
+  
 
   login() {
     console.log(`logging in with: ${this.username}/${this.password}`);
+
+    this.redisService.connect(this.username, this.password);
   }
 }
