@@ -1,6 +1,58 @@
 {
   "version": 1,
   "projects": {
+    "api-services": {
+      "projectType": "library",
+      "root": "libs/api-services",
+      "sourceRoot": "libs/api-services/src",
+      "prefix": "dnd-board",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api-services"],
+          "options": {
+            "jestConfig": "libs/api-services/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/api-services/src/**/*.ts",
+              "libs/api-services/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "data-model": {
+      "projectType": "library",
+      "root": "libs/data-model",
+      "sourceRoot": "libs/data-model/src",
+      "prefix": "dnd-board",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/data-model"],
+          "options": {
+            "jestConfig": "libs/data-model/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/data-model/src/**/*.ts",
+              "libs/data-model/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "dnd-board": {
       "projectType": "application",
       "root": "apps/dnd-board",
