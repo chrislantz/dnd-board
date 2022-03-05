@@ -1,1 +1,7 @@
-<p>board works!</p>
+<div class="board">
+    <div *ngFor="let row of rows" class="row">
+        <dnd-board-tile *ngFor="let col of cols">
+
+        </dnd-board-tile>
+    </div>
+</div>
